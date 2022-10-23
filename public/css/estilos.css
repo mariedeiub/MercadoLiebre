@@ -1,0 +1,220 @@
+/*-------- PALETA DE COLORES ------------------- */
+:root{
+    --yellow: #EAC926;
+    --dark-blue: #03264C;
+    --light-blue:#1259c3;
+    --gray:#666;
+    --light-gray:#ebebeb;
+    --green: #39b54a;
+    --base-font-family: 'Roboto', sans-serif
+}
+
+/*------------------- BODY --------------------- */
+body {
+    background-color: var(--light-gray);
+    font-family: var(--base-font-family);
+}
+
+/*------------------- HEADER ------------------- */
+header{
+    background-color: var(--yellow);
+    width:100%;
+}
+
+/*--------------------SEARCH---------------------------*/
+.bar-search{
+    display: flex;
+    width: 80vw;
+    background-color: var(--light-gray);
+    margin-left: 25px;
+    border-style:groove;
+    
+}
+
+.search{
+    background-color: var(--light-gray);
+    padding-left: 2px;
+    width: 90vw;
+    font-size: 12px;  
+}
+
+.icon-search{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/*---------------------------- PUBLICIDAD-----------------------------*/
+.publicidad{
+    width: 100vw;
+    font-size: 0.9em;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/*----------------------------LISTAS PC-----------------------------*/
+header ul{
+    display:flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    align-items: flex-end;
+    margin: 0 auto;
+}
+
+header li{
+    display: inline;
+    padding: 10px;
+}
+
+.lista{
+    display: inline;
+    width: 50%;
+}
+
+/*------------------ BOTON MENU -----------------*/
+.burger-menu{
+    background-color: var(--light-blue);
+    color:var(--light-gray);
+    padding: 3px;
+    margin-left: 200px;
+    margin-top: 20px;
+    font-size: 2em;
+    box-sizing: border-box;
+    border-radius: 3px;
+    display: inline;
+}
+
+/*---------------------------- BANNER -----------------------------*/
+.banner{
+    width: 100%;
+}
+
+/*------------------------ MAIN -----------------------*/
+main{
+    margin: 0 auto;
+    width: 90%;
+}
+
+/*------------------- PARRAFO ------------------ */
+p {
+    font-size: 12px;
+}
+
+/*------------------- OFERTAS ------------------ */
+.ofertas {
+    font-size: 24px;
+}
+
+/*-----------------------TARJETAS PRODUCTOS ----------------------*/
+main article{
+    width: 100%;
+    background-color: white;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.img-product{
+    width: 100%;
+}
+
+.foot-article{
+    border-top: solid 1px var(--gray)
+}
+
+/*---------ICONO ENVIO --------------------------*/
+.fa-truck{
+    color: var(--green);
+    padding: 10px;
+    border: solid var(--green) 1px;
+    border-radius: 100%;
+}
+
+.envio{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items:flex-end;
+}
+
+/*------------------- PRECIOS ------------------ */
+.precio {
+    font-size: 18px;
+    width: 30%;
+    margin: 0 ;
+    display: inline;
+}
+
+/*------------------- DESCUENTOS --------------- */
+.descuento {
+    font-size: 16px;
+    color: var(--green);
+    width: 70%;
+    margin: 0;
+    display: inline;
+}
+
+/*------------------- DESCRIPCION --------------- */
+article h2 {
+    font-size: 16px;
+}
+
+/*------------------- SEPARADOR --------------- */
+.separador {
+    height: 10px;
+}
+
+
+/*-------------------------- DISEÑO FOOTER -------------------------*/
+footer{
+    text-align: center;
+}
+
+.img-footer{
+    color:var(--light-blue);
+    font-size: 20px;
+}
+
+footer h2{
+    margin: 5px;
+
+}
+
+footer p{
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+/*---------------------------- MEDIA CELULAR ----------------------*/
+@media (max-width: 460px ) {   
+    .lista{
+        display: none;
+    }
+
+    article h2 {
+        display: none;
+    }
+    
+}
+
+/*---------------------------- MEDIA PC ----------------------*/
+@media (min-width: 769px ) {   
+    .burger-menu{
+        display: none;
+        margin-top: 20px;
+    }
+}
+
+/*---------------------------- MEDIA TABLET ----------------------*/
+@media (min-width: 361px ) {   
+    main article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    
+}
+
+
+
+
