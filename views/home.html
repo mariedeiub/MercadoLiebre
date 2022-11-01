@@ -19,43 +19,43 @@
 <body>
     <!--HEADER-->
     <header>
-        <!--SECCION LOGO-->
-        <section class="logo">
-            <img src="/images/logo-mercado-liebre.svg" alt="">
-        </section>
-        <!--SECCION BARRA BUSQUEDA-->
-        <section class="bar-search"> 
-            <div class="search">
-                Buscar productos, marcas y mas
-            </div>
-            <div class="icon-search">
-                <i class="fas fa-search"></i>
-            </div>
-        </section>
-        <!-- SECCION PUBLICIDAD-->
-        <section class="publicidad">
-            <i class="fas fa-hand-holding-usd"> Compra en cuotas y sin tarjeta de credito</i>
-        </section>
+        <div class="main-header-top">
+            <!--SECCION LOGO-->
+            <img src="/images/logo-mercado-liebre.svg" alt="" class="logo">
+            <!--SECCION BARRA BUSQUEDA-->
+            <section class="bar-search"> 
+                <div class="search">
+                    Buscar productos, marcas y mas
+                </div>
+                <div class="icon-search">
+                    <i class="fas fa-search"></i>
+                </div>
+            </section>
+            <!-- SECCION PUBLICIDAD-->
+            <section class="publicidad">
+                <i class="fas fa-hand-holding-usd"> Compra en cuotas y sin tarjeta de credito</i>
+            </section>
+        </div>
         <!-- SECCION DATOS TIENDA-->
         <nav class="lista">
-            <ul class="ofertas">
-                <li><a href="/ofertas">Ofertas</a></li>
-                <li><a href="/tiendas-oficiales">Tiendas Oficiales</a></li>
-                <li><a href="/vender">Vender</a></li>
-                <li><a href="/ayuda">Ayuda</a></li>
-            </ul>
             <ul class="tienda">
+                <li><a href="/ofertas">Ofertas</a></li>
+                <li><a href="/tiendas-oficiales">Tiendas Oficiales |</a></li>
+                <li><a href="/vender">Vender |</a></li>
+                <li><a href="/ayuda">Ayuda |</a></li>
+            </ul>
+            <ul class="cliente">
                 <li>
-                    <a href="/crea-tu-centa">Crea tu cuenta </a>
+                    <a href="/register">Crea tu cuenta </a>
                     <i class="far fa-id-card"></i>
                 </li>
                 <li>
-                    <a href="/ingresa">Ingresa </a>
-                    <i class="far fa-sign-in-alt"></i>
+                    <a href="/login">Ingresa </a>
+                    <i class="far fa-sign-in-alt"> | </i>
                 </li>
                 <li>
-                    <a href="/mis-compras">Mis compras </a>
-                    <i class="fas fa-shopping-basket"></i>
+                    <a href="/mis-compras">Mis compras</a>
+                    <i class="fas fa-shopping-basket"> | </i>
                 </li>
             </ul>
         </nav>
@@ -71,9 +71,9 @@
 
     <!-- MAIN -->
     <main class="index">
+        <h1>Basado en la ultima visita</h1>
         <!-- MOSTRAR PRODUCTOS BASADOS EN LA ULTIMA VISITA-->
         <section class="ofertas">
-            <h1>Basado en la ultima visita</h1>
             <!-- DETALLE CAFETERA-->
             <article>
                 <div class="img-tarjeta">
@@ -118,9 +118,24 @@
                 </div>
                 <div><h2>Samsung Galaxy S10</h2></div>
             </article>
+            <article>
+                <div class="img-tarjeta">
+                    <img src="/images/img-tv-samsung-smart.jpg" alt="" class="img-product">
+                </div>
+                <div class="envio">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <div class="foot-article">
+                    <p class="precio"> $23.200</p>
+                    <p class="descuento">5% off</p>
+                </div>
+                <div><h2>SmartTv Samsung 43"</h2></div>
+            </article>
         </section>
         <br class="separador">
+        
         <!-- SECCION DE OFERTAS-->
+        <h1>Ofertas recomendadas</h1>
         <section class="ofertas">
             <!--OFERTA CAFETERA-->
             <article>
@@ -134,7 +149,7 @@
                     <p class="precio">$6.770</p>
                     <p class="descuento">40% off</p>
                 </div>
-                <div><h2 class="descripcion">Cafetera moulinex</h2></div>
+                <div><h2>Cafetera moulinex</h2></div>
             </article>
             <br class="separador">
             <!-- OFERTA MACBOOK-->
@@ -167,7 +182,21 @@
                 <div><h2>Samsung Galaxy S10</h2></div>
             </article>
             <br class="separador">
+            <article>
+                <div class="img-tarjeta">
+                    <img src="/images/img-tv-samsung-smart.jpg" alt="" class="img-product">
+                </div>
+                <div class="envio">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <div class="foot-article">
+                    <p class="precio"> $23.200</p>
+                    <p class="descuento">5% off</p>
+                </div>
+                <div><h2>SmartTv Samsung 43"</h2></div>
+            </article>
         </section>
+        <br class="separador">
     </main>
 
     <!--FOOTER-->

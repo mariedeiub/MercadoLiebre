@@ -9,70 +9,93 @@
     --base-font-family: 'Roboto', sans-serif
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /*------------------- BODY --------------------- */
 body {
     background-color: var(--light-gray);
     font-family: var(--base-font-family);
+    margin: 0;
 }
 
 /*------------------- HEADER ------------------- */
 header{
+    width: 100%;
     background-color: var(--yellow);
-    width:100%;
+    padding: 20px auto;
+    padding-bottom: 10px;
+    position:fixed;
+    top:0;
+    z-index: 100;
 }
 
+.main-header-top{
+    font-size: 22px;
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    justify-content: space-between;
+}
+/*--------------------- LOGO --------------------*/
+.logo{
+    width: 30%;
+}
 /*--------------------SEARCH---------------------------*/
 .bar-search{
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: 80vw;
+    height: 25px;
     background-color: var(--light-gray);
     margin-left: 25px;
     border-style:groove;
+    align-items: center;
     
 }
 
 .search{
     background-color: var(--light-gray);
     padding-left: 2px;
-    width: 90vw;
     font-size: 12px;  
+    height: 14px;
 }
 
 .icon-search{
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
+    color: var(--gray)
 }
-
 /*---------------------------- PUBLICIDAD-----------------------------*/
 .publicidad{
-    width: 100vw;
-    font-size: 0.9em;
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
-    align-items: center;
-    margin-bottom: 10px;
+    text-align: center;
 }
 
 /*----------------------------LISTAS PC-----------------------------*/
+.lista{
+    display: none;
+}
+
+.lista a{
+    text-decoration: none;
+    color: var(--gray);
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 17px;
+}
+
 header ul{
     display:flex;
-    flex-direction: row;
-    justify-content:flex-end;
+    flex-direction: row-reverse;
+    justify-content: stretch;
     align-items: flex-end;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-header li{
-    display: inline;
-    padding: 10px;
-}
-
-.lista{
-    display: inline;
-    width: 50%;
-}
 
 /*------------------ BOTON MENU -----------------*/
 .burger-menu{
@@ -90,12 +113,20 @@ header li{
 /*---------------------------- BANNER -----------------------------*/
 .banner{
     width: 100%;
+    margin-top: 162px;
 }
 
 /*------------------------ MAIN -----------------------*/
 main{
-    margin: 0 auto;
     width: 90%;
+    display: inline;
+    margin-top: 40px;
+}
+
+
+main h1{
+    color: var(--gray);
+    margin-left: 20px;
 }
 
 /*------------------- PARRAFO ------------------ */
@@ -106,14 +137,20 @@ p {
 /*------------------- OFERTAS ------------------ */
 .ofertas {
     font-size: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
 }
 
 /*-----------------------TARJETAS PRODUCTOS ----------------------*/
 main article{
-    width: 100%;
+    width: 200px;
+    height: 266px;
     background-color: white;
-    align-items: center;
-    padding-bottom: 10px;
+    margin: 10px;
+    display: block;
+    position: relative;
 }
 
 .img-product{
@@ -127,16 +164,19 @@ main article{
 /*---------ICONO ENVIO --------------------------*/
 .fa-truck{
     color: var(--green);
-    padding: 10px;
+    padding: 3px;
     border: solid var(--green) 1px;
     border-radius: 100%;
+    display: block;
+    position: absolute;
+    right: 20px;
+    bottom: 43px;
 }
 
-.envio{
-    display:flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items:flex-end;
+
+
+main article:hover i{
+    transform: rotate(90deg);
 }
 
 /*------------------- PRECIOS ------------------ */
@@ -157,9 +197,7 @@ main article{
 }
 
 /*------------------- DESCRIPCION --------------- */
-article h2 {
-    font-size: 16px;
-}
+
 
 /*------------------- SEPARADOR --------------- */
 .separador {
@@ -199,22 +237,102 @@ footer p{
     
 }
 
-/*---------------------------- MEDIA PC ----------------------*/
-@media (min-width: 769px ) {   
+/*---------------------------- MEDIA TABLET ----------------------*/
+@media (min-width: 768px ) {   
+    .main-header-top{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .publicidad{
+        max-width: 350px;
+        text-align: right;
+    }
+
+    .lista{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header ul{
+        display: flex;
+    }
+
+    header li{
+        margin: 0 5px;
+    }
+
     .burger-menu{
         display: none;
-        margin-top: 20px;
     }
-}
 
-/*---------------------------- MEDIA TABLET ----------------------*/
-@media (min-width: 361px ) {   
+    .banner{
+        margin-top: 129px;
+    }
+
     main article{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
-    
+
 }
 
+/*---------------------------- MEDIA PC ----------------------*/
+@media (min-width: 1200px ) {   
+    .logo{
+        width: 250px;
+    }
+    main article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
 
+    main article:hover{
+        box-shadow: 0px 0px 15px rgb(65, 65, 65);
+    }
+
+    .main-header-top, .lista{
+        max-width: 1500px;
+        margin: auto;
+    }
+        
+    .lista{
+        margin-top: 30px;
+    }
+
+    .main-header-top{
+        align-items: center;
+    }
+
+    header li{
+        margin: 0 10px;
+    }
+
+    header a{
+        font-size: 19px;
+    }
+
+    .publicidad{
+        max-width: none;
+        text-align: right;
+        font-size: 22px;
+        font-weight: 400px;
+        margin: 0;
+    }
+
+    .bar-search{
+        max-width: 600px;
+    }
+
+    main article h2{
+        visibility: hidden;
+        height: 30px;
+    }
+    main article:hover h2{
+        visibility: visible;
+        font-size: 16px;
+
+    }
+    
+    
+}
 
 
