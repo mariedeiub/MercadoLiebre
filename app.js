@@ -4,10 +4,10 @@ const path = require('path');
 const index = "./views/home.html"
 const register = "./views/register.html"
 const login = "./views/login.html"
-let PORT = process.env.PORT || 3000;
+let PORT = process.env.PORT || 4000;
 
 
-app.use(express.static('public'));
+app.use(express.static('./public'));
 
 app.listen(PORT, () => console.log("Servidor corriendo en el Puerto: " + PORT));
 
