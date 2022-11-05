@@ -44,30 +44,47 @@ header{
 .logo{
     width: 30%;
 }
-/*--------------------SEARCH---------------------------*/
-.bar-search{
+
+/*-----------------------BARRA DE BUSQUEDA----------------------------*/
+.group {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 80vw;
-    height: 25px;
-    background-color: var(--light-gray);
-    margin-left: 25px;
-    border-style:groove;
+    line-height: 28px;
     align-items: center;
-    
-}
-
-.search{
-    background-color: var(--light-gray);
-    padding-left: 2px;
-    font-size: 12px;  
-    height: 14px;
-}
-
-.icon-search{
-    color: var(--gray)
-}
+    position: relative;
+   }
+   
+   .input-search {
+    width: 30em;
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
+   }
+   
+   .input-search::placeholder {
+    color: #9e9ea7;
+   }
+   
+   .input-search:focus, .input-search:hover {
+    outline: none;
+    border-color: var(--light-blue);
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgb(var(--dark-blue) / 10%);
+   }
+   
+   .icon {
+    position: absolute;
+    left: 1rem;
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
+   }
 /*---------------------------- PUBLICIDAD-----------------------------*/
 .publicidad{
     text-align: center;
@@ -198,6 +215,9 @@ main article:hover i{
 
 /*------------------- DESCRIPCION --------------- */
 
+.descripcion{
+    font-size: 15px;
+}
 
 /*------------------- SEPARADOR --------------- */
 .separador {
@@ -216,23 +236,31 @@ footer{
 }
 
 footer h2{
-    margin: 5px;
+    margin: 1rem 0.5rem;
 
 }
 
 footer p{
-    margin-top: 8px;
+    margin-top: 1rem;
     margin-bottom: 20px;
+    font-size: 18px;
+}
+
+/*-------------------------- COPY RIGHT -------------------------*/
+.copyright{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
 }
 
 /*---------------------------- MEDIA CELULAR ----------------------*/
-@media (max-width: 460px ) {   
+@media (min-width: 425px ) {   
     .lista{
         display: none;
     }
 
     article h2 {
-        display: none;
+        visibility: hidden;
     }
     
 }
@@ -273,14 +301,11 @@ footer p{
     main article{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
-    article h2 {
-        visibility: hidden;
-    }
-
 }
 
+
 /*---------------------------- MEDIA PC ----------------------*/
-@media (min-width: 1200px ) {   
+@media (min-width: 1024px ) {   
     .logo{
         width: 250px;
     }
@@ -332,10 +357,33 @@ footer p{
     main article:hover h2{
         visibility: visible;
         font-size: 16px;
-
     }
     
-    
+    footer{
+        display: flex;
+        flex-wrap: inherit;
+        justify-content: center;
+    }
+
+    footer section{
+        max-width: 500px;
+        margin: 0 30px 0 30px;
+        display: block;
+        font-size: 22px;
+    }
+
+    footer p{
+        font-size: 1.3rem;
+    }
+
+    footer section:hover i{
+        color: var(--green);
+    }
+
+    .input-search{
+        width: 500px;
+    }
+
 }
 
 
